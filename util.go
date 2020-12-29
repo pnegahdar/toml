@@ -6,7 +6,11 @@ import (
 	"strings"
 )
 
-const fieldTagName = "toml"
+var fieldTagName = "toml"
+
+func SetFieldTagName(tag string){
+	fieldTagName = tag
+}
 
 // fieldCache maps normalized field names to their position in a struct.
 type fieldCache struct {
